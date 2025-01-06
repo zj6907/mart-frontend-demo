@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply m-0 p-0 box-border h-dvh w-dvw text-white overflow-x-hidden 
+          bg-[url("./assets/bg/background.jpg")] bg-cover bg-center bg-no-repeat bg-fixed;
+  }
+
+  body::-webkit-scrollbar {
+    display: none; /* Webkit browsers (Chrome, Safari, Edge) */
+  }
+
+  button,
+  label,
+  a {
+    @apply select-none;
+  }
+}
+
+@layer components {
+}
+
+/* .swal2-show {
+  animation: swal2-show 0.5s !important;
+} */
+
+/* .swal2-modal {
+  background-color: rgba(63, 255, 106, 0.69) !important;
+  border: 3px solid white;
+  position: relative !important;
+  top: 100px !important;
+} */
+
+.swal2-container {
+  margin-top: 80px;
+}
+
+:root {
+  --primary-color: #da0000;
+  --primary-color-dark: #000000;
+  --color-black: rgb(49, 49, 49);
+  --title-color-create: #aca8d7;
+  --title-color-login: #aca8d7;
+  --bg-color-create: #7066e0;
+  --bg-color-edit: rgb(175, 175, 2);
+  --bg-color-confirm: rgb(175, 175, 2);
+}
