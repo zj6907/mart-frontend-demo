@@ -3,11 +3,15 @@ import { ref } from "vue"
 import LabeledInput from "../../composables/LabeledInput.vue"
 import LabeledTextarea from "@composables/LabeledTextarea.vue"
 import * as axiosClient from "../../axiosClient.js"
+import { useStore } from "vuex"
+import { useRouter } from "vue-router"
 
 const categoryName = ref(null)
 const description = ref(null)
 const imageUrl = ref(null)
 
+const store = useStore()
+const router = useRouter()
 function createCategory(ev) {
   ev.target.disabled = true
   const data = {
@@ -17,6 +21,10 @@ function createCategory(ev) {
   }
   axiosClient.HTTP("post", "/category/create", {
     data,
+    resolve: () => {
+      store.dispatch("loadCategories")
+      router.push({ name: "Categories" })
+    },
     finalCallback: () => {
       ev.target.disabled = false
     },

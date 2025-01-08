@@ -21,7 +21,7 @@ const product = computed(() => {
 const router = useRouter()
 function editProduct(ev) {
   ev.target.disabled = true
-  axiosClient.HTTP("put", `/product/update/${product.value.id}`, {
+  axiosClient.HTTP("put", `/product/update`, {
     data: product.value,
     resolve: (data) => {
       store.dispatch("loadProducts")

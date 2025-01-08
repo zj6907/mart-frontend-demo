@@ -23,7 +23,7 @@ export const HTTP = (method, url, o = {}) => {
   o.method = method
   o.url = url
   if (o.data) o.data = JSON.stringify(o.data)
-  if (["post"].includes(o.method.toLowerCase())) o.headers = { "Content-Type": "application/json" }
+  if (["post", "put", "delete", "patch"].includes(o.method.toLowerCase())) o.headers = { "Content-Type": "application/json" }
   _axiosClient(o).finally(() => o.finalCallback?.())
 }
 
