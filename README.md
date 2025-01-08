@@ -1,13 +1,28 @@
-# Vue 3 + Vite
+# Welcome to the Demo App
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+This is a simple app designed for demonstration purposes. Below are the account credentials for testing different user roles.
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+## User Roles and Credentials
 
-# [axios] npm install axios
+### Role: USER
 
-# [Sweet Alert] npm install sweetalert2
+- **Account:** `100com`
+- **Password:** `123`
 
-# [Test Api Json -- Coffee] https://api.sampleapis.com/coffee/hot
+### Role: ADMIN
 
-# [vuex] npm install vuex@next
+- **Account:** `101com`
+- **Password:** `123`
+
+## How to Use
+
+1. Clone or download the project to your local machine.
+2. Start the application as per the instructions in the backend/installation guide.
+3. Log in using the credentials provided above to explore features specific to each role.
+
+## Notes
+
+- Ensure the backend server is running before attempting to log in.
+- These credentials are for demo purposes only; do not use them in a production environment.
+
+Feel free to explore and let us know your feedback!
